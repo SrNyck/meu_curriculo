@@ -1,0 +1,156 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --gray: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.personal-info div {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    padding: 25px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--secondary);
+    font-size: 20px;
+}
+
+h3 {
+    color: var(--dark);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.summary {
+    background: var(--light);
+}
+
+.education-item, .complementary-item {
+    margin-bottom: 20px;
+}
+
+.date {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: var(--light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.languages {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.language {
+    background: var(--light);
+    padding: 10px 15px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.objective-item {
+    background: var(--light);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.objective-item h4 {
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .personal-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .objectives {
+        grid-template-columns: 1fr;
+    }
+}
